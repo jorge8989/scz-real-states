@@ -10,12 +10,15 @@ import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { PropertyService }  from './property.service';
+import { MapService }  from './map.service';
+import { MapComponent } from './map/map.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,10 @@ import { PropertyService }  from './property.service';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [PropertyService],
+  providers: [
+    PropertyService,
+    MapService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Property } from './../property';
 import { PropertyService } from './../property.service';
+import { MapComponent } from './../map/map.component';
 
 @Component({
   selector: 'app-home',

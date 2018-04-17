@@ -4,12 +4,9 @@ import { Component } from '@angular/core';
   moduleId: module.id,
   selector: 'app-root',
   template: `
-    <h1>{{title}}</h1>
     <router-outlet></router-outlet>
   `,
   styleUrls: ['app.component.css'],
 })
 
-export class AppComponent {
-  title = 'SCZ real states';
-}
+export class AppComponent {}
