@@ -30,7 +30,7 @@ export class MapComponent implements OnInit {
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v9',
       center: [this.lng, this.lat],
-      zoom: 13,
+      zoom: 14,
     });
   }
 
