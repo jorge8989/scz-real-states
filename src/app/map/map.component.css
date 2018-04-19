@@ -1,8 +1,31 @@
-body {
-  margin:0;
-  padding:0;
-}
 h1, h2, h3, h4, p {
   font-family: sans-serif;
 }
-#map { position:absolute; top:0; bottom:0; right: 0; width:70%; }
+
+.container {
+  display: flex;
+  align-items: stretch;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+}
+
+.left-sidebar {
+  width: 30%;
+  background-color: lightgreen;
+}
+
+.map-container {
+  width: 70%;
+  position: relative;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
