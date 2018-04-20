@@ -16,8 +16,8 @@ export class MapComponent implements OnInit {
   featureCollection: FeatureCollection;
   map: mapboxgl.Map;
   style = 'mapbox://styles/mapbox/streets-v10';
-  lat = -17.789528;
-  lng = -63.205442;
+  lat = -17.7833152;
+  lng = -63.1843196;
 
   constructor(private mapService: MapService, private propertyService: PropertyService) {}
 
@@ -30,7 +30,7 @@ export class MapComponent implements OnInit {
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v9',
       center: [this.lng, this.lat],
-      zoom: 14,
+      zoom: 13,
     });
   }
 

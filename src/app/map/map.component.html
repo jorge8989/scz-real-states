@@ -1,8 +1,14 @@
 <div class="container">
   <div class="left-sidebar">
-    <h1>SCZ Real States</h1>
-    <p>blablabla</p>
-    <p>blablabla</p>
+    <div class="left-sidebar-title">
+      <h2>Santa Cruz</h2>
+    </div>
+    <div *ngFor="let property of properties">
+      <p>
+        <strong>{{property.title}}</strong><br />
+        {{property.description}}
+      </p>
+    </div>
   </div>
   <div class="map-container">
     <div id="map" class="map"></div>

@@ -1,5 +1,6 @@
-h1, h2, h3, h4, p {
-  font-family: sans-serif;
+h1, h2, h3, h4, p, a {
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  color: #292b2c;
 }
 
 .container {
@@ -15,7 +16,7 @@ h1, h2, h3, h4, p {
 
 .left-sidebar {
   width: 30%;
-  background-color: lightgreen;
+  padding: 0px 15px;
 }
 
 .map-container {
