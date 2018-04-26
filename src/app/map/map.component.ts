@@ -11,7 +11,6 @@ import { PropertyService } from './../property.service';
   styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit {
-  properties: Property[] = [];
   markers: GeoJson[] = [];
   featureCollection: FeatureCollection;
   map: mapboxgl.Map;
@@ -37,14 +36,21 @@ export class MapComponent implements OnInit {
   ngOnInit(): void {
   this.propertyService.getProperties()
     .then(properties => {
-      this.properties = properties;
-      this.properties.forEach((p) => {
-        const propertyMarker = new GeoJson([p.longitude, p.latitude]);
+      properties.forEach((p) => {
+        const { title, description } = p;
+        const propertyMarker = new GeoJson([p.longitude, p.latitude], {title, description});
         this.markers.push(propertyMarker);
       });
       this.featureCollection = new FeatureCollection(this.markers);
     });
+
     this.initializeMap();
+  }
+
+  flyTo(data: GeoJson) {
+    this.map.flyTo({
+      center: data.geometry.coordinates,
+    });
   }
 
 }
