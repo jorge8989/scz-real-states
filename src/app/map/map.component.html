@@ -6,7 +6,8 @@
     <div *ngFor="let marker of markers">
       <p>
         <strong>{{marker.properties.title}}</strong><br />
-        {{marker.properties.description}}
+        {{marker.properties.description}}<br />
+        <span class="price">${{marker.properties.price}}</span>
       </p>
       <button class="button" (click)="flyTo(marker)">ver en mapa</button>
     </div>

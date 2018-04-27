@@ -37,8 +37,8 @@ export class MapComponent implements OnInit {
   this.propertyService.getProperties()
     .then(properties => {
       properties.forEach((p) => {
-        const { title, description } = p;
-        const propertyMarker = new GeoJson([p.longitude, p.latitude], {title, description});
+        const { title, description, price, longitude, latitude } = p;
+        const propertyMarker = new GeoJson([longitude, latitude], {title, description, price});
         this.markers.push(propertyMarker);
       });
       this.featureCollection = new FeatureCollection(this.markers);

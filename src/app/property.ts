@@ -4,4 +4,5 @@ export class Property {
   description: string;
   latitude: number;
   longitude: number;
+  price: number;
 }
