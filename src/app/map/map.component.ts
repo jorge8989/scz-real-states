@@ -31,6 +31,28 @@ export class MapComponent implements OnInit {
       center: [this.lng, this.lat],
       zoom: 13,
     });
+    this.map.on('load', (event) => {
+      this.displayMarkers();
+    });
+  }
+
+  displayMarkers() {
+    const map = this.map;
+    this.featureCollection.features.forEach((marker) => {
+  // create a DOM element for the marker
+    const el = document.createElement('div');
+    el.className = 'marker';
+    el.style.backgroundImage = 'url(assets/images/green-home-icon.png)';
+    el.style.width = '25px';
+    el.style.height = '38px';
+    el.style.backgroundSize = 'cover';
+    el.style.cursor = 'pointer';
+
+    // add marker to map
+    new mapboxgl.Marker(el)
+      .setLngLat(marker.geometry.coordinates)
+      .addTo(map);
+    });
   }
 
   ngOnInit(): void {
